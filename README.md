@@ -1,2 +1,2 @@
 # maratona-discover
- primeiro repositorio maratona
+ primeiro repositorio  git/github maratona-discover
