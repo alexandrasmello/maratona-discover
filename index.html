@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--=====inicio do Cabeçalho=====-->
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!--=====titulo=====-->
+    <title>dev.finance$</title>
+    <!--=====favicon basico=====-->
+    <link rel="icon" href="icon.png" />
+    <!--=====favicon Iphone nao retina, Ipod touche,android 2.1+=====-->
+    <link rel="apple-touch-icon-precomposed" href="icon.png" />
+    <!--=====chamada do css=====-->
+    <link rel='stylesheet' type='text/css' media='screen' href='./style.css'>
+    <!--=====chamada de fonte=====-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+
+    <!--=====fim do Cabeçalho=====-->
+</head>
+<!--=====inicio do Corpo da pagina=====-->
+
+<body>
+    <!-- 3 divisoes do corpo 1<header>cabeçalho</header> 2<main>conteudo do corpo</main> 3<footer>rodape</footer>-->
+    <header>
+        <img src="./assets/logo.svg" alt="dev.finance$">
+    </header>
+    <!--=====incio caixa do  main container=====-->
+    <main class="container">
+        <!--=====seção 1=====-->
+        <section id="balance">
+            <h2 class="sr-only">Balanço</h2>
+            <!--=====card dos dados entradas=====-->
+            <div class="card">
+                <h3>
+                    <span>
+                        Entradas
+                    </span>
+                    <img src="./assets/income.svg" alt="Imagem de entradas">
+                </h3>
+                <p id="incomeDisplay">R$ 0,00</p>
+            </div>
+
+            <!--=====card dos dados saidas=====-->
+            <div class="card">
+                <h3>
+                    <span>
+                        Saidas
+                    </span>
+                    <img src="./assets/expense.svg" alt="Imagem de saidas">
+                </h3>
+                <p id="expenseDisplay">R$ 0,00</p>
+            </div>
+            <!--=====card dos dados total=====-->
+            <div class="card total">
+                <h3>
+                    <span>
+                        Total
+                    </span>
+                    <img src="./assets/total.svg" alt="Imagem de Total">
+                </h3>
+                <p id="totalDisplay">R$ 0,00</p>
+            </div>
+            <!--===== fim seção 1=====-->
+        </section>
+
+        <!--=====seção 2=====-->
+        <section id="transaction">
+            <h2 class="sr-only">Transações </h2>
+            <a href="#" onclick="Modal.open()" class="button new"> + Nova Transação </a>
+            <!--=====tabela de descriçao de dados=====-->
+            <table id="data-table">
+                <!--===== cabeçalho da tabela de descriçao de dados=====-->
+                <thead>
+                    <!--=====inicio linha do cabeçalho da tabela=====-->
+                    <tr>
+                        <!--=====divisoes dos conteudo da linha do cabeçalho da tabela  =====-->
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <!--===== corpo da tabela de descriçao de dados=====-->
+                <tbody>
+
+            </table>
+            <!--===== fim seção 2=====-->
+        </section>
+    </main>
+    <!--=====inicio modal=====-->
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Nova Transação</h2>
+                <form action="" onsubmit="Form.submit(event)">
+                    <div class="input-group">
+                        <label class="sr-only" for="description">Descrição</label>
+                        <input type="text" id="description" name="description" placeholder="Descrição" />
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="amount">Valor</label>
+                        <input type="number" step="0.01" id="amount" name="amount" placeholder="0,00" />
+                        <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas
+                            decimais</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="date">Data</label>
+                        <input type="date" id="date" name="date" />
+                    </div>
+
+                    <div class="input-group actions">
+                        <a onclick="Modal.close()" href="#" class="button cancel">Cancelar</a>
+                        <button>Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>dev.finance$</p>
+    </footer>
+    <!--=====chamada do javascript <script src='endereço.js'></script> =====-->
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
