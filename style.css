@@ -1,10 +1,10 @@
-/* Global ===================== */
-:root {
-    --dark-blue: #363f5f;
+
+/* seletor de referencia raiz====*/
+root{
+    --dark-blue:#363f5f;
     --green: #49AA26;
     --light-green: #3dd705;
     --red: #e92929;
-
 }
 
 * {
@@ -17,11 +17,10 @@ html {
     font-size: 93.75%; /* 15px */
 }
 
-body {
-    background: #f0f2f5;
-    font-family:'Poppins', sans-serif
+body{
+    background-color: #f0f2f5;
+    font-family: 'poppins', sans-serif;
 }
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -34,20 +33,17 @@ body {
     border-width: 0;
 }
 
-.container {
+.container{
     width: min(90vw, 800px);
     margin: auto;
 }
-
-/* Titles ===================== */
-h2 {
+/*titulos====*/
+h2{
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
     color: var(--dark-blue);
-
     font-weight: normal;
 }
-
 /* Links & Buttons ===================== */
 a {
     color: var(--green);
@@ -65,7 +61,7 @@ button {
     border: none;
 
     color: white;
-    background: var(--green);
+    background:  #49AA26;
 
     padding: 0;
 
@@ -75,17 +71,19 @@ button {
 }
 
 button:hover {
-    background: var(--light-green);
+    background:  #3dd705;
 }
-
+/*botao novo ====*/
 .button.new {
     display: inline-block;
     margin-bottom: .8rem;
+    color: #49AA26;
 }
 
+/*botao cancelar sair de modal ====*/
 .button.cancel {
-    color: var(--red);
-    border: 2px var(--red) solid;
+    color: #e92929;
+    border: 2px #e92929 solid;
     border-radius: 0.25rem;
 
     height: 50px;
@@ -101,28 +99,67 @@ button:hover {
     opacity: 1;
 }
 
-/* Header ===================== */
-header {
-    background: #2D4A22;
+/*botao votar de contato para index ====*/
+.button.voltar {
+    color: #e92929;
+    border: 2px #e92929 solid;
+    border-radius: 0.25rem;
+
+    height: 50px;
+    width: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.6;
+}
+.button.voltar:hover {
+    opacity: 1;
+}
+.input-btn{
+    color: #0e3629;
+    border: 2px #0a2e1d solid;
+    border-radius: 0.25rem;
+
+    height: 50px;
+    width: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.6;
+
+}
+.button.cancel:hover {
+    opacity: 1;
+}
+
+header{
+    background: #2d4a22;
     padding: 2rem 0 10rem;
     text-align: center;
 }
 
-#logo {
+/*Header logo ====*/
+#logo{
     color: #fff;
     font-weight: 100;
 }
 
-/* Balance ===================== */
-#balance {
+/*balance====*/
+#balance{
     margin-top: -8rem;
+    
+    
 }
-
-#balance h2 {
-    color:white;
-    margin-top:0;
+/*balance h2 ====*/
+#balance h2{
+    color: #fff;
+    margin-top: 0;
 }
-
+/*cards de entrada e saida====*/
 /* Cards ===================== */
 .card {
     background: white;
@@ -151,48 +188,55 @@ header {
 }
 
 .card.total {
-    background: var(--green);
+    background:#49AA26;
     color: white;
 }
 
-/* Table ===================== */
+   /* Table ===================== */
 #transaction {
     display: block;
     width: 100%;
     overflow-x: auto;
 }
-#data-table {
+   /*tabela data table====*/
+   #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
     color: #969cb3;
 }
 
+   /*tabela de botao====*/
+#table-button thead th{
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    background:transparent;
+    
+}
+
 table thead tr th:first-child, 
-table tbody tr td:first-child
-{
+table tbody tr td:first-child{
+
     border-radius: 0.25rem 0 0 0.25rem;
 }
 
 table thead tr th:last-child, 
 table tbody tr td:last-child{
+
     border-radius: 0 0.25rem 0.25rem 0;
 }
 
 table thead th {
     background: white;
-
     font-weight: normal;
     padding: 1rem 2rem;
-
     text-align: left;
 }
 
 table tbody tr {
-    opacity: 0.7
+    opacity: 0.7;
 }
-
 table tbody tr:hover {
-    opacity: 1
+    opacity: 1;
 }
 
 table tbody td {
@@ -211,7 +255,7 @@ td.income {
 td.expense {
     color: #e92929;
 }
-
+/* Modal ===================== */
 /* Modal ===================== */
 .modal-overlay {
     width: 100%;
@@ -284,9 +328,23 @@ td.expense {
 .input-group.actions button {
     width: 48%;
 }
+#form-contato {
+    
+    width: min(90vw, 500px);
+    margin: auto;
+    color: #000208;
+    background: #f3f7f5;
+    border-radius: 0 0.25rem 0.25rem 0;
+    border: none;
+   
+}
+fieldset{
+    border-color: #fff;
+    margin: 20px;
+}
 
 
-/* Footer ===================== */
+/*footter====*/
 footer {
     text-align: center;
     padding: 4rem 0 2rem;
@@ -294,7 +352,6 @@ footer {
 
     opacity: 0.6;
 }
-
 
 /* Responsive ===================== */
 @media (min-width: 800px) {

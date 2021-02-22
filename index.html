@@ -1,19 +1,26 @@
 <!DOCTYPE html>
+<!--=====inicio html com atribuçao da linguagem PT-BR =====-->
 <html lang="pt-br">
-<!--=====inicio do Cabeçalho=====-->
+
+<!--=====inicio do cabeçalho head=====-->
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <!--=====meta dados com charset reconhecmento de caracteres  latino utf 8=====-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--=====meta dados viewport adaptaçao responciva do conteudo a medida da tela=====-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--=====titulo=====-->
-    <title>dev.finance$</title>
+    <title>Dev.finance$</title>
+
+    <!--=====chamada do CSS=====-->
+    <link rel="stylesheet" href="./style.css">
+
     <!--=====favicon basico=====-->
-    <link rel="icon" href="icon.png" />
-    <!--=====favicon Iphone nao retina, Ipod touche,android 2.1+=====-->
-    <link rel="apple-touch-icon-precomposed" href="icon.png" />
-    <!--=====chamada do css=====-->
-    <link rel='stylesheet' type='text/css' media='screen' href='./style.css'>
+    <link rel="icon" href="./assets/apicon.png" />
+
     <!--=====chamada de fonte=====-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -23,60 +30,92 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,100;1,400;1,700&display=swap"
         rel="stylesheet">
-
-
-    <!--=====fim do Cabeçalho=====-->
 </head>
-<!--=====inicio do Corpo da pagina=====-->
+<!--=====fim do cabeçalho head=====-->
+
+<!-- 3 divisoes do corpo 1<header>cabeçalho</header> 2<main>conteudo do corpo</main> 3<footer>rodape</footer>-->
+
+<!--=====inicio do corpo body=====-->
 
 <body>
-    <!-- 3 divisoes do corpo 1<header>cabeçalho</header> 2<main>conteudo do corpo</main> 3<footer>rodape</footer>-->
+    <!--=====inicio do cabeçalho header=====-->
     <header>
         <img src="./assets/logo.svg" alt="dev.finance$">
+        <!--=====fim do cabeçalho header=====-->
     </header>
-    <!--=====incio caixa do  main container=====-->
+
+    <!--=====inicio do main de conteudos dentro da caixa classe Container da pagina=====-->
     <main class="container">
-        <!--=====seção 1=====-->
+
+        <!--=====inicio secão 1 da pagina=====-->
         <section id="balance">
+
+            <!--=====classe sr-only tratada posicionamento no css=====-->
             <h2 class="sr-only">Balanço</h2>
-            <!--=====card dos dados entradas=====-->
+
+
+            <!--=====inicio  das divs da secão 1 cards=====-->
             <div class="card">
                 <h3>
+                    <!--=====span=====-->
                     <span>
                         Entradas
                     </span>
                     <img src="./assets/income.svg" alt="Imagem de entradas">
                 </h3>
+
                 <p id="incomeDisplay">R$ 0,00</p>
+
             </div>
 
-            <!--=====card dos dados saidas=====-->
             <div class="card">
                 <h3>
+                    <!--=====span=====-->
                     <span>
                         Saidas
                     </span>
                     <img src="./assets/expense.svg" alt="Imagem de saidas">
                 </h3>
+
                 <p id="expenseDisplay">R$ 0,00</p>
             </div>
-            <!--=====card dos dados total=====-->
+
+            <!--=====classe card total=====-->
             <div class="card total">
                 <h3>
+                    <!--=====span=====-->
                     <span>
                         Total
+
                     </span>
                     <img src="./assets/total.svg" alt="Imagem de Total">
                 </h3>
+
                 <p id="totalDisplay">R$ 0,00</p>
+                <!--=====fim  das divs da secão 1 cards=====-->
             </div>
-            <!--===== fim seção 1=====-->
+
+            <!--=====fim secão 1 da pagina=====-->
         </section>
 
-        <!--=====seção 2=====-->
+
+        <!--=====inicio secão 2 da pagina=====-->
         <section id="transaction">
             <h2 class="sr-only">Transações </h2>
-            <a href="#" onclick="Modal.open()" class="button new"> + Nova Transação </a>
+            <!--=====inicio tabela button=====-->
+            <table id="table-button">
+                <thead>
+                    <tr>
+                        <th><a href="#" onclick="Modal.open()" class="button new"> + Nova Transação </a> </th>
+                        <th> <a href="./Help.html"  class="button new"><strong> Contato</strong></a> </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <!--=====inicio tabela button=====-->
+
             <!--=====tabela de descriçao de dados=====-->
             <table id="data-table">
                 <!--===== cabeçalho da tabela de descriçao de dados=====-->
@@ -129,10 +168,13 @@
         </div>
     </div>
 
+
+
+ <!--=====footer rodape=====-->
     <footer>
         <p>dev.finance$</p>
     </footer>
-    <!--=====chamada do javascript <script src='endereço.js'></script> =====-->
+
     <script src="./scripts.js"></script>
 </body>
 

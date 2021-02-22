@@ -1,3 +1,5 @@
+
+
 const Modal = {
     open(){
         // Abrir modal
@@ -116,7 +118,7 @@ const DOM = {
 const Utils = {
     formatAmount(value){
         value = Number(value.replace(/\,\./g, "")) * 100
-       
+        
         return value
     },
 
@@ -156,9 +158,9 @@ const Form = {
 
     validateFields() {
         const { description, amount, date } = Form.getValues()
-       
-        if( description.trim() === "" ||
-            amount.trim() === "" ||
+        
+        if( description.trim() === "" || 
+            amount.trim() === "" || 
             date.trim() === "" ) {
                 throw new Error("Por favor, preencha todos os campos")
         }
@@ -166,7 +168,7 @@ const Form = {
 
     formatValues() {
         let { description, amount, date } = Form.getValues()
-       
+        
         amount = Utils.formatAmount(amount)
 
         date = Utils.formatDate(date)
@@ -202,7 +204,7 @@ const Form = {
 const App = {
     init() {
         Transaction.all.forEach(DOM.addTransaction)
-       
+        
         DOM.updateBalance()
 
         Storage.set(Transaction.all)
@@ -214,4 +216,3 @@ const App = {
 }
 
 App.init()
-

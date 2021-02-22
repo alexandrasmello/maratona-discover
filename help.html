@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--=====inicio html com atribuçao da linguagem PT-BR =====-->
+<html lang="pt-br">
+
+<!--=====inicio do cabeçalho head=====-->
+
+<head>
+
+    <!--=====meta dados com charset reconhecmento de caracteres  latino utf 8=====-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--=====meta dados viewport adaptaçao responciva do conteudo a medida da tela=====-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=====titulo=====-->
+    <title>Dev.finance$</title>
+
+    <!--=====chamada do CSS=====-->
+    <link rel="stylesheet" href="./style.css">
+
+    <!--=====favicon basico=====-->
+    <link rel="icon" href="./assets/apicon.png" />
+
+    <!--=====chamada de fonte=====-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<!--=====fim do cabeçalho head=====-->
+
+
+<body>
+    <!--=====inicio do cabeçalho header=====-->
+    <header>
+        <img src="./assets/logo.svg" alt="dev.finance$">
+        <!--=====fim do cabeçalho header=====-->
+    </header>
+
+    <div id="form-contato">
+        <form id="contatoshelp" method="POST" id="fcontato" action="mailto:vendacuiabagraf@gmail.com">
+            <output id="formMessage" role="alert" aria-live="assertive" tabindex="0"></output>
+            <fieldset id="usuario">
+                <legend>
+                    <h2> Formulário de Contato</h2>
+                </legend><br>
+                <p><label for="cNome"> Nome: </label> <input type="text" name="tNome" id="cNome" size="30"
+                        maxlength="40" placeholder="Nome completo"></p>
+                <p> <label for="csenha">Senha:</label> <input type="password" name="tsenha" id="csenha" size="8"
+                        maxlength="8" placeholder="8 dígitos"></p>
+                <p><label for="cemail"> E-mail:</label> <input type="email" name="temail" id="cemail" size="30"
+                        maxlength="40" placeholder="digite seu e-mail"></p>
+
+            </fieldset>
+            <fieldset id="endereço">
+                <legend>Endereço</legend><br>
+                <p> <label for="clograd">Logradouro:</label><input type="text" name="tlograd" id="clograd" size="30"
+                        maxlength="90" placeholder="Rua, Av, Travessa"></p>
+                <p> <label for="cnum">Número:</label><input type="number" name="tnum" id="cnum" min="0" max="9999999">
+                </p>
+                <p> <label for="cest">Estado:</label> <select name="test" id="cest">
+                        Acre (AC)
+                        <option value="AL">Alagoas </option>
+                        <option value="AP">Amapá </option>
+                        <option value="AM">Amazonas </option>
+                        <option value="BA">Bahia </option>
+                        <option value="CE">Ceará (</option>
+                        <option value="DF">Distrito Federal </option>
+                        <option value="ES">Espírito Santo </option>
+                        <option value="GO">Goiás </option>
+                        <option value="MA">Maranhão </option>
+                        <option value="MT">Mato Grosso </option>
+                        <option value="MS">Mato Grosso do Sul </option>
+                        <option value="MG">Minas Gerais </option>
+                        <option value="PA">Pará </option>
+                        <option value="PB">Paraíba </option>
+                        <option value="PR">Paraná </option>
+                        <option value="PE">Pernambuco </option>
+                        <option value="PI">Piauí </option>
+                        <option value="RJ">Rio de Janeiro </option>
+                        <option value="RN">Rio Grande do Norte </option>
+                        <option value="RS">Rio Grande do Sul </option>
+                        <option value="RO">Rondônia </option>
+                        <option value="RR">Roraima </option>
+                        <option value="SC">Santa Catarina </option>
+                        <option value="SP">São Paulo </option>
+                        <option value="SE">Sergipe </option>
+                        <option value="TO">Tocantins </option>
+
+                    </select></p>
+                <p> <label for="ccid">Cidade:</label> <input type="text" name="tcid" id="ccid" size="10" maxlength="70"
+                        placeholder="Cidade"></p><br>
+            </fieldset>
+
+            <fieldset id="mensagem">
+                <legend>Digite sua Mensagem</legend><br>
+
+                <p><label for="cmsg"> Mensagem:</label> <textarea name="tmsg" id="cmsg" cols="40" rows="6"
+                        placeholder="digite sua mensagem"></textarea></p>
+            </fieldset>
+
+            <table id="table-button">
+                <thead>
+                    <tr>
+                        <th><button type="submit" class="input-btn">Enviar Mensagem</button></th>
+                        <th> <a href="./index.html" class="button voltar"><strong> Voltar</strong></a> </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+    </div>
+    </form>
+
+
+   
+    <!--=====footer rodape=====-->
+    <footer>
+        <p>dev.finance$</p>
+    </footer>
+</body>
+
+
+</html>
